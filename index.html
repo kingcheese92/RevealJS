@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>RevealJS Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="../dist/Reveal.css">
+    <title>Image Comparison</title>
 
-	<style>
-		body {
-			text-align: center;
-		}
-		.item {
-			max-width: 90vw;
-			height: auto;
-			width: 800px;
-			margin: auto;
-		}
-	</style>
+    <link rel="stylesheet" href="../dist/Reveal.css">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+        }
+
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .item {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
-<body>
-	<h1>RevealJS Demo</h1>
-	<a href="https://github.com/CreativeTechGuy/RevealJS"><h2>Documentation</h2></a>
-	<div class="reveal item">
-		<img src="leftImage.jpg">
-		<img src="rightImage.jpg">
-	</div>
-	<h4>Reveal Percent: <span id="percent"></span>%</h4>
 
-	<script src="../dist/Reveal.js"></script>
-	
-	<script>
-		Reveal.onupdate = function(data) {
-			document.getElementById("percent").innerText = Math.round(data.percent);
-		};
-	</script>
+<body>
+
+    <div class="reveal item">
+        <img src="leftImage.jpg" alt="Before">
+        <img src="rightImage.jpg" alt="After">
+    </div>
+
+    <script src="../dist/Reveal.js"></script>
+
 </body>
 </html>
