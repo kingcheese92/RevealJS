@@ -83,18 +83,14 @@ html,
 body {
   margin: 0 !important;
   padding: 0 !important;
-  width: 100% !important;
-  height: 1280px !important;
   overflow: hidden !important;
 }
 
-.reveal {
-  width: 1920px !important;
-  height: 1280px !important;
-  overflow: hidden !important;
+body::-webkit-scrollbar {
+  display: none !important;
 }
 
-.reveal .slides {
-  width: 1920px !important;
-  height: 1280px !important;
+body {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
