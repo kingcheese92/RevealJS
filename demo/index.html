@@ -23,7 +23,10 @@
       overflow-y: hidden;
     }
 
-    /* The slider itself */
+    /*
+      Keep the slider at the same 3:2 ratio
+      as the 1920 × 1280 images.
+    */
     .reveal {
       position: relative;
       width: 100%;
@@ -33,69 +36,45 @@
       overflow: hidden;
     }
 
-    /* Both images occupy the exact same space */
-    .reveal .reveal-img {
+    /*
+      The images overlap each other.
+      Reveal.css already makes the second image absolute.
+    */
+    .reveal-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .reveal-img:nth-child(2) {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      object-fit: cover;
-      display: block;
     }
 
-    /* Divider */
-    .reveal .reveal-bar {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      margin-left: -2px;
-      background: white;
-      box-shadow:
-        0 0 3px rgba(0, 0, 0, 0.7),
-        0 0 8px rgba(0, 0, 0, 0.35);
+    /*
+      Keep the ORIGINAL divider styling from Reveal.css.
+      These are only here to make sure the divider
+      stays above the images.
+    */
+    .reveal-bar {
       z-index: 10;
-      cursor: ew-resize;
     }
 
-    /* Circular handle */
-    .reveal .reveal-grabber {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 52px;
-      height: 52px;
-      margin-left: -26px;
-      margin-top: -26px;
-      border-radius: 50%;
-      background: white;
-      border: 2px solid rgba(0, 0, 0, 0.5);
-      box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.45);
-      cursor: ew-resize;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .reveal-grabber {
+      z-index: 11;
     }
 
-    /* Arrows inside the handle */
-    .reveal .reveal-arrows {
-      color: #333;
-      font-size: 17px;
-      line-height: 1;
-      white-space: nowrap;
-      letter-spacing: -3px;
-      user-select: none;
-    }
-
-    /* Prevent selection while dragging */
+    /*
+      Prevent accidental text/image selection while dragging.
+    */
     .reveal,
     .reveal * {
-      user-select: none;
       -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
   </style>
 </head>
