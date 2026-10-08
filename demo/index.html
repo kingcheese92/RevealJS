@@ -6,7 +6,8 @@
 
   <title>Image Comparison</title>
 
-  <link rel="stylesheet" href="../dist/Reveal.css">
+  <!-- Add a version number to prevent an old CSS file from being cached -->
+  <link rel="stylesheet" href="../dist/Reveal.css?v=2">
 
   <style>
     html,
@@ -24,57 +25,24 @@
     }
 
     /*
-      Keep the slider at the same 3:2 ratio
-      as the 1920 × 1280 images.
+      1920 × 1280 = 3:2
+      This makes the container match the image proportions.
     */
     .reveal {
       position: relative;
       width: 100%;
       max-width: 1920px;
-      aspect-ratio: 1920 / 1280;
+      aspect-ratio: 3 / 2;
       margin: 0 auto;
       overflow: hidden;
     }
 
     /*
-      The images overlap each other.
-      Reveal.css already makes the second image absolute.
+      Let Reveal.css handle the positioning of the images.
     */
     .reveal-img {
       width: 100%;
       height: auto;
-      display: block;
-    }
-
-    .reveal-img:nth-child(2) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
-
-    /*
-      Keep the ORIGINAL divider styling from Reveal.css.
-      These are only here to make sure the divider
-      stays above the images.
-    */
-    .reveal-bar {
-      z-index: 10;
-    }
-
-    .reveal-grabber {
-      z-index: 11;
-    }
-
-    /*
-      Prevent accidental text/image selection while dragging.
-    */
-    .reveal,
-    .reveal * {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
     }
   </style>
 </head>
@@ -86,7 +54,7 @@
     <img src="rightImage.jpg" alt="After">
   </div>
 
-  <script src="../dist/Reveal.js"></script>
+  <script src="../dist/Reveal.js?v=2"></script>
 
 </body>
 </html>
