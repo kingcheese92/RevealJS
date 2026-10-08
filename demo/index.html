@@ -9,21 +9,29 @@
     <link rel="stylesheet" href="../dist/Reveal.css">
 
     <style>
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
             background: transparent;
+
+            /* Hide all scrollbars */
+            overflow: hidden;
         }
 
         body {
-            width: 100%;
-            overflow-x: hidden;
+            overflow: hidden;
         }
 
         .item {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+
+            /* Prevent the comparison from creating a scrollbar */
+            overflow: hidden;
         }
     </style>
 </head>
