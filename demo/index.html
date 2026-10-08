@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Image Comparison</title>
-
     <link rel="stylesheet" href="../dist/Reveal.css">
-
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            background: transparent;
-        }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      body::-webkit-scrollbar {
+        display: none;
+      }
 
-        body {
-            width: 100%;
-            overflow-x: hidden;
-        }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      body {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+      }
 
-        .item {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+      }
+
+      body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      .item {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
     </style>
-</head>
-
-<body>
-
+  </head>
+  <body>
     <div class="reveal item">
-        <img src="leftImage.jpg" alt="Before">
-        <img src="rightImage.jpg" alt="After">
+      <img src="leftImage.jpg" alt="Before">
+      <img src="rightImage.jpg" alt="After">
     </div>
-
     <script src="../dist/Reveal.js"></script>
-
-</body>
+  </body>
 </html>
