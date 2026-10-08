@@ -1,67 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
 
-body {
-    overflow: hidden;
-}
+    body {
+      overflow: hidden;
+    }
 
-.reveal {
-    overflow: hidden;
-}
-</style>
-<head>
+    .reveal {
+      overflow: hidden;
+    }
+  </style>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Image Comparison</title>
-
     <link rel="stylesheet" href="../dist/Reveal.css">
-
     <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        /* Hide all scrollbars */
+        overflow: hidden;
+      }
 
-            /* Hide all scrollbars */
-            overflow: hidden;
-        }
+      body {
+        overflow: hidden;
+      }
 
-        body {
-            overflow: hidden;
-        }
-
-        .item {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-
-            /* Prevent the comparison from creating a scrollbar */
-            overflow: hidden;
-        }
+      .item {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        /* Prevent the comparison from creating a scrollbar */
+        overflow: hidden;
+      }
     </style>
-</head>
-
-<body>
-
+  </head>
+  <body>
     <div class="reveal item">
-        <img src="leftImage.jpg" alt="Before">
-        <img src="rightImage.jpg" alt="After">
+      <img src="leftImage.jpg" alt="Before">
+      <img src="rightImage.jpg" alt="After">
     </div>
-
     <script src="../dist/Reveal.js"></script>
-
-</body>
+  </body>
 </html>
